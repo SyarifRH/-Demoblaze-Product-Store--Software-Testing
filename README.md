@@ -1,6 +1,6 @@
 # Demoblaze-Product-Store-Software-Testing
 
-<h2>Tester : Syarif Ridhohidayatulloh</h2>
+<h3>Tester : Syarif Ridhohidayatulloh</h3>
 
 - Automation Used:<br>
   *Selenium Web Driver<br>
@@ -10,15 +10,16 @@
 - Browser For Testing : <br>
   \*Google Chrome Version 110.0.5481.178 <br>
 
-<h1>Summary Document</h1>
-<h2>Test Design</h2>
+<h>Summary Document</h>
+
+<h3>Test Design</h3>
 - Feedback & User Experience : https://docs.google.com/document/d/10rhKUowlHbBO3L_Tdz81llOd2T_XLWa2y5f9L_3LelI/edit?usp=share_link<br>
 - Test Case & Performance : https://docs.google.com/spreadsheets/d/1cjnIK2cFz3G0aXeWVpYJqkScOPXFejPEyH19AC7oOYg/edit?usp=share_link<br>
 
-<h2>Bug Report</h2>
+<h3>Bug Report</h3>
 - Bug Report : https://docs.google.com/document/d/1uL2sWXafRAXEwSWP5wlLyOEtWfrcV4k6BCh9w8qmqdY/edit?usp=share_link<br>
 
-<h2>Automation Test Script</h2>
+<h3>Automation Test Script</h3>
 - Select the file named "test_testCase.py"
 
 #Steps to run test from file test_testCase.py
