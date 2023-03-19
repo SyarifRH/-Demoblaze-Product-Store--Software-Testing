@@ -30,7 +30,7 @@
 2. Make sure you have installed Python and pip on your computer. If not, download and install Python and pip first.<br>
 3. Navigate to the downloaded repository directory using the terminal or command prompt.<br>
 4. Install the pytest and selenium libraries by running the following commands in the terminal or command prompt:<br>
-   ![Alt Text]({https://postimg.cc/t1Nm48g2})<br>
+   ![Alt Text]({https://github.com/SyarifRH/Demoblaze-Software-Testing/blob/main/image/image1.JPG})<br>
 5. Run the test_testCase.py file with the following command in the terminal or command prompt:
    ![Alt Text]({link_ke_gambar})<br>
    Or, use the following command to generate an HTML report:
