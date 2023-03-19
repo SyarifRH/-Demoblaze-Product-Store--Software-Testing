@@ -31,9 +31,9 @@
 3. Navigate to the downloaded repository directory using the terminal or command prompt.<br>
 4. Install the pytest and selenium libraries by running the following commands in the terminal or command prompt:<br>
    ![Screenshot1](https://github.com/SyarifRH/Demoblaze-Software-Testing/blob/main/image/image1.JPG)<br>
-5. Run the test_testCase.py file with the following command in the terminal or command prompt:
+5. Run the test_testCase.py file with the following command in the terminal or command prompt:<br>
    ![Screenshot2](https://github.com/SyarifRH/Demoblaze-Software-Testing/blob/main/image/image2.JPG)<br>
-   Or, use the following command to generate an HTML report:
+   Or, use the following command to generate an HTML report:<br>
    ![Screenshot2](https://github.com/SyarifRH/Demoblaze-Software-Testing/blob/main/image/image3.JPG)<br>
 6. Wait for all test cases to finish running and the results will be displayed in the terminal or command prompt, or in the HTML report if using the second command above.<br>
 
