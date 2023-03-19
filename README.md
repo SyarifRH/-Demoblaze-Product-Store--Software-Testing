@@ -22,9 +22,9 @@
 - Browser For Testing : <br>
   \*Google Chrome Version 110.0.5481.178 <br>
 
-#Steps to run test from file test_testCase.py
+<h3>Steps to run test from file test_testCase.py</h3>
 
-<p><h3>Here are the steps to run the tests from the test_testCase.py file in the GitHub repository SyarifRH/Demoblaze-Software-Testing:</h3><br>
+<p><b>Here are the steps to run the tests from the test_testCase.py file in the GitHub repository SyarifRH/Demoblaze-Software-Testing:</b><br>
 
 1. Make sure you have access to the SyarifRH/Demoblaze-Software-Testing GitHub repository and have downloaded or cloned it to your computer.<br>
 2. Make sure you have installed Python and pip on your computer. If not, download and install Python and pip first.<br>
