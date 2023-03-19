@@ -253,7 +253,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 19-Mar-2023 at 01:05:49 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
+    <p>Report generated on 19-Mar-2023 at 15:49:03 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -272,8 +272,8 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>Python</td>
         <td>3.11.1</td></tr></table>
     <h2>Summary</h2>
-    <p>2 tests ran in 43.16 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">2 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>10 tests ran in 102.14 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">8 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">2 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -284,11 +284,29 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
           <th class="sortable links" col="links">Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">test_testCase.py::test_negative_contact_form_validation</td>
+          <td class="col-duration">0.07</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">browser = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;7fac228568d8e51ac2f0d156a683e903&quot;)&gt;<br/><br/>    def test_negative_contact_form_validation(browser):<br/>        driver = browser<br/>&gt;       driver.get(&quot;https://www.demoblaze.com/&quot;)<br/><br/>test_testCase.py:96: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py:449: in get<br/>    self.execute(Command.GET, {&quot;url&quot;: url})<br/>C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py:440: in execute<br/>    self.error_handler.check_response(response)<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x000001C2C3CD4D10&gt;<br/>response = {&#x27;status&#x27;: 500, &#x27;value&#x27;: &#x27;{&quot;value&quot;:{&quot;data&quot;:{&quot;text&quot;:&quot;Thanks for the message!!&quot;},&quot;error&quot;:&quot;unexpected alert open&quot;,&quot;messag...\n\\tRtlGetAppContainerNamedObjectPath [0x77C27B74+228]\\n\\tRtlGetAppContainerNamedObjectPath [0x77C27B44+180]\\n&quot;}}&#x27;}<br/><br/>    def check_response(self, response: Dict[str, Any]) -&gt; None:<br/>        &quot;&quot;&quot;Checks that a JSON response from the WebDriver does not have an<br/>        error.<br/>    <br/>        :Args:<br/>         - response - The JSON response from the WebDriver server as a dictionary<br/>           object.<br/>    <br/>        :Raises: If the response contains an error message.<br/>        &quot;&quot;&quot;<br/>        status = response.get(&quot;status&quot;, None)<br/>        if not status or status == ErrorCode.SUCCESS:<br/>            return<br/>        value = None<br/>        message = response.get(&quot;message&quot;, &quot;&quot;)<br/>        screen: str = response.get(&quot;screen&quot;, &quot;&quot;)<br/>        stacktrace = None<br/>        if isinstance(status, int):<br/>            value_json = response.get(&quot;value&quot;, None)<br/>            if value_json and isinstance(value_json, str):<br/>                import json<br/>    <br/>                try:<br/>                    value = json.loads(value_json)<br/>                    if len(value.keys()) == 1:<br/>                        value = value[&quot;value&quot;]<br/>                    status = value.get(&quot;error&quot;, None)<br/>                    if not status:<br/>                        status = value.get(&quot;status&quot;, ErrorCode.UNKNOWN_ERROR)<br/>                        message = value.get(&quot;value&quot;) or value.get(&quot;message&quot;)<br/>                        if not isinstance(message, str):<br/>                            value = message<br/>                            message = message.get(&quot;message&quot;)<br/>                    else:<br/>                        message = value.get(&quot;message&quot;, None)<br/>                except ValueError:<br/>                    pass<br/>    <br/>        exception_class: Type[WebDriverException]<br/>        if status in ErrorCode.NO_SUCH_ELEMENT:<br/>            exception_class = NoSuchElementException<br/>        elif status in ErrorCode.NO_SUCH_FRAME:<br/>            exception_class = NoSuchFrameException<br/>        elif status in ErrorCode.NO_SUCH_SHADOW_ROOT:<br/>            exception_class = NoSuchShadowRootException<br/>        elif status in ErrorCode.NO_SUCH_WINDOW:<br/>            exception_class = NoSuchWindowException<br/>        elif status in ErrorCode.STALE_ELEMENT_REFERENCE:<br/>            exception_class = StaleElementReferenceException<br/>        elif status in ErrorCode.ELEMENT_NOT_VISIBLE:<br/>            exception_class = ElementNotVisibleException<br/>        elif status in ErrorCode.INVALID_ELEMENT_STATE:<br/>            exception_class = InvalidElementStateException<br/>        elif (<br/>            status in ErrorCode.INVALID_SELECTOR<br/>            or status in ErrorCode.INVALID_XPATH_SELECTOR<br/>            or status in ErrorCode.INVALID_XPATH_SELECTOR_RETURN_TYPER<br/>        ):<br/>            exception_class = InvalidSelectorException<br/>        elif status in ErrorCode.ELEMENT_IS_NOT_SELECTABLE:<br/>            exception_class = ElementNotSelectableException<br/>        elif status in ErrorCode.ELEMENT_NOT_INTERACTABLE:<br/>            exception_class = ElementNotInteractableException<br/>        elif status in ErrorCode.INVALID_COOKIE_DOMAIN:<br/>            exception_class = InvalidCookieDomainException<br/>        elif status in ErrorCode.UNABLE_TO_SET_COOKIE:<br/>            exception_class = UnableToSetCookieException<br/>        elif status in ErrorCode.TIMEOUT:<br/>            exception_class = TimeoutException<br/>        elif status in ErrorCode.SCRIPT_TIMEOUT:<br/>            exception_class = TimeoutException<br/>        elif status in ErrorCode.UNKNOWN_ERROR:<br/>            exception_class = WebDriverException<br/>        elif status in ErrorCode.UNEXPECTED_ALERT_OPEN:<br/>            exception_class = UnexpectedAlertPresentException<br/>        elif status in ErrorCode.NO_ALERT_OPEN:<br/>            exception_class = NoAlertPresentException<br/>        elif status in ErrorCode.IME_NOT_AVAILABLE:<br/>            exception_class = ImeNotAvailableException<br/>        elif status in ErrorCode.IME_ENGINE_ACTIVATION_FAILED:<br/>            exception_class = ImeActivationFailedException<br/>        elif status in ErrorCode.MOVE_TARGET_OUT_OF_BOUNDS:<br/>            exception_class = MoveTargetOutOfBoundsException<br/>        elif status in ErrorCode.JAVASCRIPT_ERROR:<br/>            exception_class = JavascriptException<br/>        elif status in ErrorCode.SESSION_NOT_CREATED:<br/>            exception_class = SessionNotCreatedException<br/>        elif status in ErrorCode.INVALID_ARGUMENT:<br/>            exception_class = InvalidArgumentException<br/>        elif status in ErrorCode.NO_SUCH_COOKIE:<br/>            exception_class = NoSuchCookieException<br/>        elif status in ErrorCode.UNABLE_TO_CAPTURE_SCREEN:<br/>            exception_class = ScreenshotException<br/>        elif status in ErrorCode.ELEMENT_CLICK_INTERCEPTED:<br/>            exception_class = ElementClickInterceptedException<br/>        elif status in ErrorCode.INSECURE_CERTIFICATE:<br/>            exception_class = InsecureCertificateException<br/>        elif status in ErrorCode.INVALID_COORDINATES:<br/>            exception_class = InvalidCoordinatesException<br/>        elif status in ErrorCode.INVALID_SESSION_ID:<br/>            exception_class = InvalidSessionIdException<br/>        elif status in ErrorCode.UNKNOWN_METHOD:<br/>            exception_class = UnknownMethodException<br/>        else:<br/>            exception_class = WebDriverException<br/>        if not value:<br/>            value = response[&quot;value&quot;]<br/>        if isinstance(value, str):<br/>            raise exception_class(value)<br/>        if message == &quot;&quot; and &quot;message&quot; in value:<br/>            message = value[&quot;message&quot;]<br/>    <br/>        screen = None  # type: ignore[assignment]<br/>        if &quot;screen&quot; in value:<br/>            screen = value[&quot;screen&quot;]<br/>    <br/>        stacktrace = None<br/>        st_value = value.get(&quot;stackTrace&quot;) or value.get(&quot;stacktrace&quot;)<br/>        if st_value:<br/>            if isinstance(st_value, str):<br/>                stacktrace = st_value.split(&quot;\n&quot;)<br/>            else:<br/>                stacktrace = []<br/>                try:<br/>                    for frame in st_value:<br/>                        line = frame.get(&quot;lineNumber&quot;, &quot;&quot;)<br/>                        file = frame.get(&quot;fileName&quot;, &quot;&lt;anonymous&gt;&quot;)<br/>                        if line:<br/>                            file = f&quot;{file}:{line}&quot;<br/>                        meth = frame.get(&quot;methodName&quot;, &quot;&lt;anonymous&gt;&quot;)<br/>                        if &quot;className&quot; in frame:<br/>                            meth = f&quot;{frame[&#x27;className&#x27;]}.{meth}&quot;<br/>                        msg = &quot;    at %s (%s)&quot;<br/>                        msg = msg % (meth, file)<br/>                        stacktrace.append(msg)<br/>                except TypeError:<br/>                    pass<br/>        if exception_class == UnexpectedAlertPresentException:<br/>            alert_text = None<br/>            if &quot;data&quot; in value:<br/>                alert_text = value[&quot;data&quot;].get(&quot;text&quot;)<br/>            elif &quot;alert&quot; in value:<br/>                alert_text = value[&quot;alert&quot;].get(&quot;text&quot;)<br/>&gt;           raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here<br/><span class="error">E           selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: Thanks for the message!!</span><br/><span class="error">E           Message: unexpected alert open: {Alert text : Thanks for the message!!}</span><br/><span class="error">E             (Session info: chrome=111.0.5563.65)</span><br/><span class="error">E           Stacktrace:</span><br/><span class="error">E           Backtrace:</span><br/><span class="error">E           	(No symbol) [0x0110DCE3]</span><br/><span class="error">E           	(No symbol) [0x010A39D1]</span><br/><span class="error">E           	(No symbol) [0x00FB4DA8]</span><br/><span class="error">E           	(No symbol) [0x0100D9C8]</span><br/><span class="error">E           	(No symbol) [0x00FFACC6]</span><br/><span class="error">E           	(No symbol) [0x00FD6F68]</span><br/><span class="error">E           	(No symbol) [0x00FD80CD]</span><br/><span class="error">E           	GetHandleVerifier [0x01383832+2506274]</span><br/><span class="error">E           	GetHandleVerifier [0x013B9794+2727300]</span><br/><span class="error">E           	GetHandleVerifier [0x013BE36C+2746716]</span><br/><span class="error">E           	GetHandleVerifier [0x011B6690+617600]</span><br/><span class="error">E           	(No symbol) [0x010AC712]</span><br/><span class="error">E           	(No symbol) [0x010B1FF8]</span><br/><span class="error">E           	(No symbol) [0x010B20DB]</span><br/><span class="error">E           	(No symbol) [0x010BC63B]</span><br/><span class="error">E           	BaseThreadInitThunk [0x76F06359+25]</span><br/><span class="error">E           	RtlGetAppContainerNamedObjectPath [0x77C27B74+228]</span><br/><span class="error">E           	RtlGetAppContainerNamedObjectPath [0x77C27B44+180]</span><br/><br/>C:\Users\Administrator\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\errorhandler.py:244: UnexpectedAlertPresentException<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">test_testCase.py::test_negative_register_functionality</td>
+          <td class="col-duration">7.76</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">browser = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;7fac228568d8e51ac2f0d156a683e903&quot;)&gt;<br/><br/>    def test_negative_register_functionality(browser):<br/>        driver = browser<br/>        driver.get(&quot;https://www.demoblaze.com/&quot;)<br/>        time.sleep(2)<br/>        driver.find_element(By.ID, &quot;signin2&quot;).click()<br/>        time.sleep(2)<br/>        driver.find_element(By.ID, &quot;sign-username&quot;).send_keys(&quot;mmz&quot;)<br/>        driver.find_element(By.ID, &quot;sign-password&quot;).send_keys(&quot;aaz&quot;)<br/>        driver.find_element(<br/>            By.XPATH, &quot;//body/div[@id=&#x27;signInModal&#x27;]/div[1]/div[1]/div[3]/button[2]&quot;).click()<br/>        time.sleep(2)<br/>        try:<br/>            response_data = WebDriverWait(driver, 10).until(EC.alert_is_present())<br/>            response_text = response_data.text<br/>            driver.switch_to.alert.accept()<br/>&gt;           assert response_text == &quot;Please fill in the data correctly&quot;<br/><span class="error">E           AssertionError: assert &#x27;Sign up successful.&#x27; == &#x27;Please fill ...ata correctly&#x27;</span><br/><span class="error">E             - Please fill in the data correctly</span><br/><span class="error">E             + Sign up successful.</span><br/><br/>test_testCase.py:226: AssertionError<br/><br/>During handling of the above exception, another exception occurred:<br/><br/>browser = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;7fac228568d8e51ac2f0d156a683e903&quot;)&gt;<br/><br/>    def test_negative_register_functionality(browser):<br/>        driver = browser<br/>        driver.get(&quot;https://www.demoblaze.com/&quot;)<br/>        time.sleep(2)<br/>        driver.find_element(By.ID, &quot;signin2&quot;).click()<br/>        time.sleep(2)<br/>        driver.find_element(By.ID, &quot;sign-username&quot;).send_keys(&quot;mmz&quot;)<br/>        driver.find_element(By.ID, &quot;sign-password&quot;).send_keys(&quot;aaz&quot;)<br/>        driver.find_element(<br/>            By.XPATH, &quot;//body/div[@id=&#x27;signInModal&#x27;]/div[1]/div[1]/div[3]/button[2]&quot;).click()<br/>        time.sleep(2)<br/>        try:<br/>            response_data = WebDriverWait(driver, 10).until(EC.alert_is_present())<br/>            response_text = response_data.text<br/>            driver.switch_to.alert.accept()<br/>            assert response_text == &quot;Please fill in the data correctly&quot;<br/>        except:<br/>&gt;           pytest.fail(&quot;Pengujian Failed&quot;)<br/><span class="error">E           Failed: Pengujian Failed</span><br/><br/>test_testCase.py:228: Failed<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">test_testCase.py::test_homepage_navigation</td>
-          <td class="col-duration">10.03</td>
+          <td class="col-name">test_testCase.py::test_positive_homepage_navigation</td>
+          <td class="col-duration">11.24</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -296,8 +314,62 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">test_testCase.py::test_product_purchase</td>
-          <td class="col-duration">27.80</td>
+          <td class="col-name">test_testCase.py::test_positive_product_purchase</td>
+          <td class="col-duration">26.16</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_testCase.py::test_positive_contact_form</td>
+          <td class="col-duration">10.05</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_testCase.py::test_positive_login_functionality</td>
+          <td class="col-duration">10.34</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_testCase.py::test_negative1_login_functionality</td>
+          <td class="col-duration">8.09</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_testCase.py::test_negative2_login_functionality</td>
+          <td class="col-duration">8.43</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_testCase.py::test_positive_register_functionality</td>
+          <td class="col-duration">7.52</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_testCase.py::test_negative_register_blankData_functionality</td>
+          <td class="col-duration">10.84</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
